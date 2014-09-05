@@ -1,0 +1,13 @@
+*.aux
+
+*.gz
+
+*.toc
+
+*.synctx.gz
+
+*.tex.bak
+
+*.eps
+
+Prohaupt.log

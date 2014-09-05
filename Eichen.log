@@ -1,0 +1,88 @@
+
+
+*******************************************************************************
+Fri Sep 05 15:59:42 2014
+
+
+FIT:    data read from 'Eichen.dat' u 2:($1*2/1000):3
+        #datapoints = 10
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.70395e+006      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 484.835
+
+initial set of free parameter values
+
+m               = 1
+b               = 1
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 4.2651e-006
+rel. change during last iteration : -7.60524e-012
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000730163
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.33138e-007
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = 0.00125299       +/- 1.047e-006   (0.08354%)
+b               = -0.00335608      +/- 0.0006475    (19.29%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.947  1.000 
+
+
+*******************************************************************************
+Fri Sep 05 16:00:54 2014
+
+
+FIT:    data read from 'Eichen.dat' u 2:($1*2/1000)
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 7.77649e-006      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 351.98
+
+initial set of free parameter values
+
+m               = 0.00125299
+b               = -0.00335608
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 6.39706e-006
+rel. change during last iteration : -9.15096e-011
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000894222
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.99632e-007
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = 0.00125141       +/- 1.232e-006   (0.09845%)
+b               = -0.00274884      +/- 0.0006133    (22.31%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.887  1.000 
