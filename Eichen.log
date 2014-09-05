@@ -1,50 +1,7 @@
 
 
 *******************************************************************************
-Fri Sep 05 15:59:42 2014
-
-
-FIT:    data read from 'Eichen.dat' u 2:($1*2/1000):3
-        #datapoints = 10
-function used for fitting: f(x)
-fitted parameters initialized with current variable values
-
-
-
- Iteration 0
- WSSR        : 4.70395e+006      delta(WSSR)/WSSR   : 0
- delta(WSSR) : 0                 limit for stopping : 1e-005
- lambda	  : 484.835
-
-initial set of free parameter values
-
-m               = 1
-b               = 1
-
-After 7 iterations the fit converged.
-final sum of squares of residuals : 4.2651e-006
-rel. change during last iteration : -7.60524e-012
-
-degrees of freedom    (FIT_NDF)                        : 8
-rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000730163
-variance of residuals (reduced chisquare) = WSSR/ndf   : 5.33138e-007
-
-Final set of parameters            Asymptotic Standard Error
-=======================            ==========================
-
-m               = 0.00125299       +/- 1.047e-006   (0.08354%)
-b               = -0.00335608      +/- 0.0006475    (19.29%)
-
-
-correlation matrix of the fit parameters:
-
-               m      b      
-m               1.000 
-b              -0.947  1.000 
-
-
-*******************************************************************************
-Fri Sep 05 16:00:54 2014
+Fri Sep 05 22:52:17 2014
 
 
 FIT:    data read from 'Eichen.dat' u 2:($1*2/1000)
@@ -57,18 +14,63 @@ fitted parameters initialized with current variable values
 
 
  Iteration 0
- WSSR        : 7.77649e-006      delta(WSSR)/WSSR   : 0
+ WSSR        : 1.#QNAN           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 1.#QNAN           limit for stopping : 1e-005
+ lambda	  : 1.#QNAN
+
+initial set of free parameter values
+
+m               = 1.#QNAN
+b               = -0.00275159
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.#QNAN
+abs. change during last iteration : 1.#QNAN
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.#QNAN
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.#QNAN
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = 1.#QNAN          +/- 1.#QO        (1.#QO%)
+b               = -0.00275159      +/- 1.#QO        (1.#QO%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.#QO 
+b               1.#QO  1.#QO 
+
+
+*******************************************************************************
+Fri Sep 05 22:54:29 2014
+
+
+FIT:    data read from 'Eichen.dat' u 2:($1*2/1000)
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.48045e+006      delta(WSSR)/WSSR   : 0
  delta(WSSR) : 0                 limit for stopping : 1e-005
  lambda	  : 351.98
 
 initial set of free parameter values
 
-m               = 0.00125299
-b               = -0.00335608
+m               = 1
+b               = 1
 
-After 6 iterations the fit converged.
+After 7 iterations the fit converged.
 final sum of squares of residuals : 6.39706e-006
-rel. change during last iteration : -9.15096e-011
+rel. change during last iteration : -1.62864e-014
 
 degrees of freedom    (FIT_NDF)                        : 8
 rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000894222
@@ -86,3 +88,90 @@ correlation matrix of the fit parameters:
                m      b      
 m               1.000 
 b              -0.887  1.000 
+
+
+*******************************************************************************
+Fri Sep 05 22:59:50 2014
+
+
+FIT:    data read from 'Eichen.dat' u 2:($1*2/1000)
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 6.39706e-006      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 351.98
+
+initial set of free parameter values
+
+m               = 0.00125141
+b               = -0.00274884
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 6.39706e-006
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000894222
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.99632e-007
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = 0.00125141       +/- 1.232e-006   (0.09845%)
+b               = -0.00274884      +/- 0.0006133    (22.31%)
+
+
+correlation matrix of the fit parameters:
+
+               m      b      
+m               1.000 
+b              -0.887  1.000 
+
+
+*******************************************************************************
+Fri Sep 05 22:59:51 2014
+
+
+FIT:    data read from 'Eichen.dat' u 2:($1*2/1000)
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.47162e+006      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 497.774
+
+initial set of free parameter values
+
+a               = 1
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 2.24622e-005
+rel. change during last iteration : -9.07544e-008
+
+degrees of freedom    (FIT_NDF)                        : 9
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00157981
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.4958e-006
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.00124651       +/- 1.004e-006   (0.08051%)
+
+
+correlation matrix of the fit parameters:
+
+               a      
+a               1.000 
