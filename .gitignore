@@ -8,6 +8,10 @@
 
 *.tex.bak
 
+*.bbl
+
+*.blg
+
 *.eps
 
 Prohaupt.log
