@@ -26,7 +26,7 @@ fit i(x) 'HallLang.dat' u 1:2:3 via c
 p 'IndSpule.dat' u (b-$1):2:3 w e t'Induktion',\
   'HallLang.dat' u 1:($2-c):3 w e t'Hallsonde',\
    f(x) t'Näherung lange Spule',\
-   g(x) t'theoretischer Verlauf'
+   g(x) lt -1 t'theoretischer Verlauf'
 
 set output
 !epstopdf LangIndHall.eps

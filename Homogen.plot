@@ -20,7 +20,7 @@ p 'HallLang.dat' u 1:2:3 w e t'Lange Spule',\
   f(x) t'theo. Max. Helmholtzspule',\
   'HallLang.dat' u (-$1):2:3 w e lt 1 notitle,\
   'HallDick.dat' u (-$1):2:3 w e lt 2 notitle,\
-  'HallHelm2.dat' u (-$1):2:3 w e lt 3 notitle
+  'HallHelm2.dat' u (-$1-3):2:3 w e lt 3 notitle
 
 
 set output
