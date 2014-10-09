@@ -1,0 +1,82 @@
+
+
+*******************************************************************************
+Thu Oct  9 14:46:50 2014
+
+
+FIT:    data read from 'HallLang.dat' u 1:2:3
+        format = x:z:s
+        #datapoints = 51
+function used for fitting: h1(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2736.41           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 10
+
+initial set of free parameter values
+
+b1              = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 2319.92
+rel. change during last iteration : -2.55098e-12
+
+degrees of freedom    (FIT_NDF)                        : 50
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 6.81164
+variance of residuals (reduced chisquare) = WSSR/ndf   : 46.3984
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b1              = 1.28577          +/- 0.09538      (7.418%)
+
+
+correlation matrix of the fit parameters:
+
+               b1     
+b1              1.000 
+
+
+*******************************************************************************
+Thu Oct  9 14:46:51 2014
+
+
+FIT:    data read from 'HallDick.dat' u 1:2:3
+        format = x:z:s
+        #datapoints = 37
+function used for fitting: h2(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 693.846           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 10
+
+initial set of free parameter values
+
+b2              = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 651.796
+rel. change during last iteration : -3.26341e-12
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4.25505
+variance of residuals (reduced chisquare) = WSSR/ndf   : 18.1055
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b2              = 1.10661          +/- 0.06995      (6.321%)
+
+
+correlation matrix of the fit parameters:
+
+               b2     
+b2              1.000 
