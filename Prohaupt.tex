@@ -170,7 +170,6 @@ Spulen sind für die Transformation von Spannungen essentiell.
 Jede Spule besitzt ein charakteristisches Magnetfeld mit dessen genauer Kenntnis man zum Beispiel Untersuchungen wie Magnetresonanztomographie ermöglichen kann.
 Dafür ist allerdings eine sehr genaue Beschreibung des Magnetfeldes der Spule notwendig.
 Für zwei Spulen wurde es hier durchgeführt.
-\cite{gerthsen}
 
 \section{Theorie}
 \label{sec:theorie}
@@ -187,6 +186,7 @@ Darurch ergibt sich
 \end{align}
 
 Die Maxwell-Gleichungen
+\cite{gerthsen}
 
 
 \section{Durchführung}
@@ -212,6 +212,22 @@ Zuletzt werden die Daten der einzelnen Spulen wie Länge, Durchmesser und Wicklu
 \section{Auswertung}
 \label{sec:auswertung}
 \subsection{Eichen des Ladungsmessgeräts}
+\begin{align}
+		R_\text{ges}=R_1+\left(\frac{1}{R_2}+\frac{1}{R_L+R_\text{int}}\right)^{-1}
+\end{align}
+
+\begin{align*}
+	R_2 I_2=(R_L+R_\text{int})I_\kappa
+\end{align*}
+
+\begin{align*}
+	I_\text{ges}=I_\kappa+I_2=I_\kappa\left(1+\frac{R_L+R_\text{int}}{R_2}\right)
+\end{align*}
+
+\begin{align}
+	R_\kappa=\frac{U}{I_\kappa}=\frac{U}{I_\text{ges}}\left(1+\frac{R_L+R_\text{int}}{R_2}\right)=R_\text{ges}\left(1+\frac{R_L+R_\text{int}}{R_2}\right)
+\end{align}
+
 \begin{figure}[!htb]
 	\centering
 	\input{Eichen}
@@ -246,7 +262,7 @@ Da der Fehler so gering ist wird er in der folgenden Berechnung nicht berücksic
 \end{figure}
 
 \subsection{Bestimmung von $\mu_0$}
-\begin{table}
+\begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|}
 	\hline
@@ -257,9 +273,10 @@ Da der Fehler so gering ist wird er in der folgenden Berechnung nicht berücksic
 	\hline
 	          & Lange Spule & $13.67 \pm 0.11$ \\
 	Hallsonde & Dicke Spule & $13.28 \pm 0.13$ \\
-	          & Helmholtzspule & $12.39 +/- 0.05$ \\
+	          & Helmholtzspule & $12.39 \pm 0.05$ \\
 	\hline	
 	\end{tabular}
+	\caption{Aus den verschiedenen Messungen bestimmte Magnetische Feldkonstante}
 \end{table}
 
 
