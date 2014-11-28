@@ -187,21 +187,64 @@ Darurch ergibt sich
 \end{align}
 Die Wechselwirkung des Magnetischen Feldes mit elektrischen Ladungen wird durch die \textsc{Lorentz}-Kraft erzeugt:
 \begin{align}
-	F_L=q\,\vec v\times \vec B
-\end{align}<++>
-Die Maxwell-Gleichungen beschreiben nun diese Felder:
+	F_L=q\,\vec v\times \vec B\,.\label{eq:Lorentz}
+\end{align}
+Sie besagt, dass Magnetfelder durch elektrische Ladungsträger erzeugt werden können und umgekehrt.
+Nach \cite[S.215]{griffith} gilt für erzeugte Magnetfelder durch bewegte Ladungen das \emph{Biot-Savart}-Gesetz:
+\begin{align}
+	\vec B(\vec r)=\frac{\mu_0 I}{4\pi}\int\frac{dl\times \hat r}{r^2}\label{eq:Biot}
+\end{align}
+Die Maxwell-Gleichungen beschreiben die Felder:
 \begin{align}
 	\nabla\cdot\vec B=0\\
 	\nabla\times\vec H=\vec j+\frac{\partial \vec D}{\partial t}
 \end{align}
 
-Nach \cite[S.215]{griffith} gilt für erzeugte Magnetfelder durch bewegte Ladungen das \emph{Biot-Savart}-Gesetz:
+\subsection{Magnetfelder von Spulen}
+\subsubsection*{Zylinderspulen}
+Nach Gleichung \ref{eq:Biot} erzeugen Ströme ein Magnetfeld.
+Für das Innere einer kreisförmige Leiterschleife der Länge $L$ mit der Windungen pro Länge $n$, urch die ein Strom $I$ fließt gilt
 \begin{align}
-	\vec B(\vec r)=\frac{\mu_0 I}{4\pi}\int\frac{dl\times \hat r}{r^2}\label{eq:Biot}
+	B=\frac{\mu_0 nI}L\,.
 \end{align}
+Dies ist eine Näherung, bei der das Magnetfeld im Inneren als homogen angenommen wird und außerhalb vernachlässigt wird.
+Dies gilt für lange Spulen ($R<<L$).
+Ist diese Näherung zu ungenau, so muss das Biot-Savart-Gesetz aus Gleichung \eqref{eq:Biot} verwendet werden.
+Daraus ergibt durch die Integration über alle Windungen
+\begin{align}
+	B(z)=\frac{\mu_0 nI}{2}\left(\frac{z+L/2}{\sqrt{R^2+(z+L/2)^2}}-\frac{z-L/2}{\sqrt{R^2+(z-L/2)^2}}\right)\,.\label{eq:BSpule}
+\end{align}
+Dabei parametrisiert $z$ die Symmetrieachse der Spule und deren Ursprung ist in der Mitte der Spule.
 
+\subsubsection*{Helmholzspulen}
+Um homogene elektrische Felder in guter Näherung zu erzeugen, kann man einen Plattenkondensator verwenden.
+Ein homogenes Magnetfeld zu erzeugen ist wesentlich anspruchsvoller. 
+Das hier verwendete \textsc{Helmholz}-Spulenpaar ist die wohl gebräuchlichste Lösung.
+Dafür wird nicht eine unendlich (oder zumindest sehr) lange Spule verwendet, sondern nur zwei relativ kleine.
+Diese, welche für sich genommen nur ein inhomogenes Magnetfeld besitzen, sind in einer bestimmten Geometrie angeordnet, so dass sich auch mit ihnen gute Ergebnisse zumindest in kleinen Raumbereichen erzielen lassen.
+In einer Helmholzspule gilt nach \cite[S. 94]{demtroeder2} für die Mitte der Spulen
+\begin{align}
+	B\approx\frac{8\mu_0nI}{\sqrt{125}R}\label{eq:BHelm}
+\end{align}
+Dies wird erreicht, dass die mit der Entfernung schwächer werdenden Felder sich im Inneren des Paares idealerweise genau ausgleichen.
+Die sogenannte \textsc{Helmholz}-Bedingung beschreibt den Spulenabstand im Verhältnis zu ihrem Radius.
+Diese beiden Größen sollten im Idealfall die selben Dimensionen (jeweils $R$) haben.\\
 
+\subsection{Hallsonde}
+Eine Hallsonde ist ein technisches Bauteil um das Magnetfeld an einer Stelle zu bestimmen.
+Die Funktionsweise wurde bereits in Protokoll \emph{15 - Dia- und Paramagnetismus} erläutert.
 
+\subsection{Induktionsspule}
+Eine Induktionsspule ist eine Spule, die an ein Amperemeter angeschlossen ist.
+Ändert sich der magnetische Fluss durch sie, so folgt nach dem Induktionsgesetz:
+\begin{align}
+	U_\text{ind}&=-n\dot\Phi=-n\frac d{dt}(\vec A\cdot\vec B)\\
+	\Leftrightarrow B_\perp &=-\frac{1}{nA}\int U_\text{ind}\, dt\,.
+\end{align}
+Dies gilt, falls $A=const.$ is istt.
+Das Integral über die Spannung kann nun von einem Stromintegrator bestimmt werden.
+Der hier verwendete gibt jedoch nicht direkt das Integral aus, sondern nur einen dazu proportionalen Wert.
+Daher muss es noch geeicht werden.
 \section{Durchführung}
 \label{sec:durchfuehrung}
 Zuerst muss der Stromintegrator kalibriert werden.
