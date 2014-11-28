@@ -229,26 +229,31 @@ In einer Helmholzspule gilt nach \cite[S. 94]{demtroeder2} für die Mitte der Sp
 Dies wird erreicht, dass die mit der Entfernung schwächer werdenden Felder sich im Inneren des Paares idealerweise genau ausgleichen.
 Die sogenannte \textsc{Helmholz}-Bedingung beschreibt den Spulenabstand im Verhältnis zu ihrem Radius.
 Diese beiden Größen sollten im Idealfall die selben Dimensionen (jeweils $R$) haben.\\
-
-\subsection{Hallsonde}
+\subsection{Messverfahren von Magnetfeldern}
+\subsubsection*{Hallsonde}
 Eine Hallsonde ist ein technisches Bauteil um das Magnetfeld an einer Stelle zu bestimmen.
 Die Funktionsweise wurde bereits in Protokoll \emph{15 - Dia- und Paramagnetismus} erläutert.
 
-\subsection{Induktionsspule}
-Eine Induktionsspule ist eine Spule, die an ein Amperemeter angeschlossen ist.
+\subsubsection*{Induktionsspule}
+Eine Induktionsspule ist eine Spule, die an einen Stromintegrator angeschlossen ist.
 Ändert sich der magnetische Fluss durch sie, so folgt nach dem Induktionsgesetz:
 \begin{align}
 	U_\text{ind}&=-n\dot\Phi=-n\frac d{dt}(\vec A\cdot\vec B)\\
 	\Leftrightarrow B_\perp &=-\frac{1}{nA}\int U_\text{ind}\, dt\,.
 \end{align}
-Dies gilt, falls $A=const.$ is istt.
+Dies gilt, falls $A=const.$ is ist.
 Das Integral über die Spannung kann nun von einem Stromintegrator bestimmt werden.
+Dies liefert die geflossene Ladung, welche über 
+\begin{align}
+	R_\text{int}\cdot Q=\int_0^t U_\text{ind}\, dt'
+\end{align}
 Der hier verwendete gibt jedoch nicht direkt das Integral aus, sondern nur einen dazu proportionalen Wert.
 Daher muss es noch geeicht werden.
+Außerdem kann eine Induktionsspule nur Magnetfeldänderungen messen und nicht absolute Größen, so dass man das Magnetfeld einmal abschalten muss.
 \section{Durchführung}
 \label{sec:durchfuehrung}
 Zuerst muss der Stromintegrator kalibriert werden.
-Dazu \\
+Dazu wird er an ein \\
 \begin{figure}[!htb]
 	 \centering
 	 \includegraphics[scale=1.0]{IndSpuleAufbau.png}
