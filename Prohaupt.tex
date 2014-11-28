@@ -177,16 +177,29 @@ Für zwei Spulen wurde es hier durchgeführt.
 Magnetfelder lassen sich durch die magnetische Flussdichte $\vec B$ und die Feldstärke $\vec H$ beschreiben.
 Mit der Magnetisierung $\vec M$ kann man diese verknüpfen:
 \begin{align}
-	\vec H=\frac 1{\mu_0}\vec B-\vec M\, .
+	\vec H=\frac 1{\mu_0}\vec B-\vec M
 \end{align}
+Mit der \emph{Influenzkonstante} $\mu_0$.
 Für geringe Flussdichten ist die Magnetisierung proportional zu der Flussdichte: $\vec M=\chi\vec H$.
 Darurch ergibt sich
 \begin{align}
 	\vec B=\mu_0(1+\chi )\vec H=\mu_0\mu_r\vec H\, .
 \end{align}
+Die Wechselwirkung des Magnetischen Feldes mit elektrischen Ladungen wird durch die \textsc{Lorentz}-Kraft erzeugt:
+\begin{align}
+	F_L=q\,\vec v\times \vec B
+\end{align}<++>
+Die Maxwell-Gleichungen beschreiben nun diese Felder:
+\begin{align}
+	\nabla\cdot\vec B=0\\
+	\nabla\times\vec H=\vec j+\frac{\partial \vec D}{\partial t}
+\end{align}
 
-Die Maxwell-Gleichungen
-\cite{gerthsen}
+Nach \cite[S.215]{griffith} gilt für erzeugte Magnetfelder durch bewegte Ladungen das \emph{Biot-Savart}-Gesetz:
+\begin{align}
+	\vec B(\vec r)=\frac{\mu_0 I}{4\pi}\int\frac{dl\times \hat r}{r^2}\label{eq:Biot}
+\end{align}
+
 
 
 \section{Durchführung}
