@@ -253,7 +253,8 @@ Außerdem kann eine Induktionsspule nur Magnetfeldänderungen messen und nicht a
 \section{Durchführung}
 \label{sec:durchfuehrung}
 Zuerst muss der Stromintegrator kalibriert werden.
-Dazu wird er an ein \\
+Dazu wird er über einen Zeitschalter an eine Stromquelle angeschlossen.
+Der Zeitschalter wird nun im Bereich von 50 bis 500ms  mit mindestens 10 verschiedenen Zeiten in Betrieb genommen und jeweils zu den Zeiten wird die Anzeige des Integrators notiert.\\
 \begin{figure}[!htb]
 	 \centering
 	 \includegraphics[scale=1.0]{IndSpuleAufbau.png}
@@ -323,6 +324,7 @@ Da der Fehler so gering ist wird er in der folgenden Berechnung nicht berücksic
 \end{figure}
 
 \subsection{Bestimmung von $\mu_0$}
+In Tabelle \ref{tab:mu} sind die nach 
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|}
@@ -337,12 +339,39 @@ Da der Fehler so gering ist wird er in der folgenden Berechnung nicht berücksic
 	          & Helmholtzspule & $12.39 \pm 0.05$ \\
 	\hline	
 	\end{tabular}
-	\caption{Aus den verschiedenen Messungen bestimmte Magnetische Feldkonstante}
+	\caption{Aus den verschiedenen Messungen bestimmte magnetische Feldkonstante}
+	\label{tab:mu}
 \end{table}
 
 
 \section{Diskussion}
 \label{sec:diskussion}
+\subsection{Eichen des Stromintegrators}
+In der Graphik \ref{fig:Eichen} sind die Ladungen gegen die vom Stromintegrator angezeigten Skalenteile aufgetragen.
+Die Messwerte liegen sehr gut auf einer Geraden, so dass sich nur eine Unsicherheit der Geradensteigung von $0.1\%$ ergibt.
+
+\subsection{Vergleich der Messmethoden}
+In Abb. \ref{fig:LangIndHall} sind die Messwerte der beiden Methoden eingezeichnet, sowie die theoretische Kurve.
+Dabei fällt auf, dass beide Messwerte innerhalb der Spule über dem theoretischen Wert liegen.
+Die Messung der Induktionsspule ist jedoch dichter an diesem.
+Die Induktionsspule ist jedoch im Bereich von 15cm bis zu der letzten Messung fast identisch mit der Theoriekurve.
+
+\subsection{Hallsonde}
+In dem Diagramm \ref{fig:HallVergleich} sind die Messwerte der Hallsonde zusammen mit den Theoriekurven für die dicke und die lange Spule aufgetragen.
+bei beiden liegen die Messungen im Inneren der Spulen über den berechneten Werten und fallen danach darunter.
+Die Messwerte beinhalten zwar kaum die erwarteten in ihren Fehlerintervallen, jedoch folgen sie deutlich den Kurven, so dass sich vermuten lässt, dass im Inneren Effekte vernachlässigt wurden, welche die Werte beeinflussten.
+Aich kann man gut sehen, dass die Felder im Inneren nicht so groß werden, wie unter der Näherung der langen Spule.
+
+
+\subsection{Homogenität der Magnetfelder}
+In Abbildung \ref{fig:Homogen} sind die Messwerte der Hallsonde für alle Spulen aufgetragen.
+Die Werte, welche nicht aufgenommen wurden, wurden um den Mittelpunkt der Spule gespigelt, da diese einen symmetrischen Verlauf besitzt.
+Wie zu erwarten, hat die dicke Spule keinen nennenswerten Bereich, in dem sie ein homogenes Magnetfeld besitzt, während die Helmholzspulen auf 10cm eine annähernd konstante Feldstärke aufweisen.
+Die lange Spule ist natürlich auf einem noch größeren Bereich (ca. 30cm) in guter Näherung mit einem homogenen Feld gefüllt.
+
+
+\subsection{Bestimmung von $\mu_0$}
+Der gewichtete Mittelwert aus Tabelle \ref{tab:mu}
 
 \bibliography{literatur}
 \bibliographystyle{babalpha}
