@@ -185,20 +185,21 @@ Darurch ergibt sich
 \begin{align}
 	\vec B=\mu_0(1+\chi )\vec H=\mu_0\mu_r\vec H\, .
 \end{align}
+Bei den in Diesem Versuch verwendeten Spulen handelt es sich um Luftspulen, für die $\mu_r\approx 1$ gilt.
 Die Wechselwirkung des Magnetischen Feldes mit elektrischen Ladungen wird durch die \textsc{Lorentz}-Kraft erzeugt:
 \begin{align}
-	F_L=q\,\vec v\times \vec B\,.\label{eq:Lorentz}
+	\vec F_L=q\,\vec v\times \vec B\,.\label{eq:Lorentz}
 \end{align}
 Sie besagt, dass Magnetfelder durch elektrische Ladungsträger erzeugt werden können und umgekehrt.
 Nach \cite[S.215]{griffith} gilt für erzeugte Magnetfelder durch bewegte Ladungen das \emph{Biot-Savart}-Gesetz:
 \begin{align}
 	\vec B(\vec r)=\frac{\mu_0 I}{4\pi}\int\frac{dl\times \hat r}{r^2}\label{eq:Biot}
 \end{align}
-Die Maxwell-Gleichungen beschreiben die Felder:
-\begin{align}
-	\nabla\cdot\vec B=0\\
-	\nabla\times\vec H=\vec j+\frac{\partial \vec D}{\partial t}
-\end{align}
+%Die Maxwell-Gleichungen beschreiben die Felder:
+%\begin{align}
+%	\nabla\cdot\vec B=0\\
+%	\nabla\times\vec H=\vec j+\frac{\partial \vec D}{\partial t}
+%\end{align}
 Nach dem \textsc{Ampère}schen Gesetz gilt:
 \begin{align}
 	\oint B\, dl=\mu_0I\label{eq:mu}
@@ -207,7 +208,7 @@ Nach dem \textsc{Ampère}schen Gesetz gilt:
 \subsection{Magnetfelder von Spulen}
 \subsubsection*{Zylinderspulen}
 Nach Gleichung \ref{eq:Biot} erzeugen Ströme ein Magnetfeld.
-Für das Innere einer kreisförmige Leiterschleife der Länge $L$ mit der Windungen pro Länge $n$, urch die ein Strom $I$ fließt gilt
+Für das Innere einer kreisförmige Leiterschleife der Länge $L$ mit der Windungszahl $n$, durch die ein Strom $I$ fließt gilt
 \begin{align}
 	B=\frac{\mu_0 nI}L\,.
 \end{align}
@@ -320,6 +321,8 @@ Hierbei fällt auf, dass die Messung der Hallsonde innerhalb der Spule stärker 
 	\label{fig:LangIndHall}
 \end{figure}
 \subsection{Messung mit der Hallsonde}
+In Diagramm \ref{fig:HallVergleich} sind die Messwerte der Hallsonde für die lange und die dicke Spule mit den theoretischen Messwerten aufgetragen.
+
 \begin{figure}[!htb]
 	\centering
 	\input{Hall}
@@ -327,6 +330,11 @@ Hierbei fällt auf, dass die Messung der Hallsonde innerhalb der Spule stärker 
 	\label{fig:HallVergleich}
 \end{figure}
 \subsection{Homogenität der Magnetfelder}
+In Abbildung \ref{fig:Homogen} sind die Messwerte der Hallsonde für alle Spulen aufgetragen.
+Die Werte, welche nicht aufgenommen wurden, wurden um den Mittelpunkt der Spulen gespigelt, da diese einen symmetrischen Verlauf besitzen.
+Hierbei fällt auf, dass die Helmholzspulen zwar außerhalb der Spulen einen sehr starken Abfall der Feldstärke besitzen, im Inneren ist ihr Magnetfeld jedoch deutlich homogener, als das der Dicken Spule.
+Bei dieser fällt es zwar zum Rand hin nicht so schnell ab, es sit jedoch an keiner Stelle konstant.
+
 \begin{figure}[!htb]
 	\centering
 	\input{Homogen}
@@ -340,7 +348,7 @@ In Tabelle \ref{tab:mu} sind die Berechneten $\mu_0$ zu sehen, welche nach der F
 	B=\mu_0 H
 \end{align*}
 berechnet wird.
-Dabei werden für das $B$-Feld die Messwerte und für das $H$-Feld die theoretisch nach Formeln \eqref{eq:BSpule} und \eqref{eq:BHelm} multipliziert mit $\mu_0$ bestimmten Werte.
+Dabei werden für das $B$-Feld die Messwerte und für das $H$-Feld die theoretisch nach Formeln \eqref{eq:BSpule} und \eqref{eq:BHelm} bestimmten Werte.
 Zu beachten ist hierbei, dass es sich bei den Näherungen des theoretischen $B$-Feldes um Taylor-Entwicklungen um die Mitte der Spule handelt, welche außerhalb der Spulen deutlich ungenauer werden.
 
 \begin{table}[!htb]
