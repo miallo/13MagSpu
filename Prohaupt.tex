@@ -179,13 +179,13 @@ Mit der Magnetisierung $\vec M$ kann man diese verknüpfen:
 \begin{align}
 	\vec H=\frac 1{\mu_0}\vec B-\vec M
 \end{align}
-Mit der \emph{Influenzkonstante} $\mu_0$.
+Mit der \emph{Influenzkonstante} oder \emph{magnetischen Feldkonstante} $\mu_0$.
 Für geringe Flussdichten ist die Magnetisierung proportional zu der Flussdichte: $\vec M=\chi\vec H$.
-Darurch ergibt sich
+Dadurch ergibt sich
 \begin{align}
 	\vec B=\mu_0(1+\chi )\vec H=\mu_0\mu_r\vec H\, .
 \end{align}
-Bei den in Diesem Versuch verwendeten Spulen handelt es sich um Luftspulen, für die $\mu_r\approx 1$ gilt.
+Bei den in diesem Versuch verwendeten Spulen handelt es sich um Luftspulen, für die $\mu_r\approx 1$ gilt.
 Die Wechselwirkung des Magnetischen Feldes mit elektrischen Ladungen wird durch die \textsc{Lorentz}-Kraft erzeugt:
 \begin{align}
 	\vec F_L=q\,\vec v\times \vec B\,.\label{eq:Lorentz}
@@ -221,19 +221,19 @@ Daraus ergibt durch die Integration über alle Windungen
 \end{align}
 Dabei parametrisiert $z$ die Symmetrieachse der Spule und deren Ursprung ist in der Mitte der Spule.
 
-\subsubsection*{Helmholzspulen}
+\subsubsection*{Helmholtzspulen}
 Um homogene elektrische Felder in guter Näherung zu erzeugen, kann man einen Plattenkondensator verwenden.
 Ein homogenes Magnetfeld zu erzeugen ist wesentlich anspruchsvoller. 
-Das hier verwendete \textsc{Helmholz}-Spulenpaar ist die wohl gebräuchlichste Lösung.
+Das hier verwendete \textsc{Helmholtz}-Spulenpaar ist die wohl gebräuchlichste Lösung.
 Dafür wird nicht eine unendlich (oder zumindest sehr) lange Spule verwendet, sondern nur zwei relativ kleine.
 Diese, welche für sich genommen nur ein inhomogenes Magnetfeld besitzen, sind in einer bestimmten Geometrie angeordnet, so dass sich auch mit ihnen gute Ergebnisse zumindest in kleinen Raumbereichen erzielen lassen.
-In einer Helmholzspule gilt nach \cite[S. 94]{demtroeder2} für die Mitte der Spulen
+In einer Helmholtzspule gilt nach \cite[S. 94]{demtroeder2} für die Mitte der Spulen
 \begin{align}
 	B\approx\frac{8\mu_0nI}{\sqrt{125}R}\label{eq:BHelm}
 \end{align}
 Dies wird erreicht, dass die mit der Entfernung schwächer werdenden Felder sich im Inneren des Paares idealerweise genau ausgleichen.
-Die sogenannte \textsc{Helmholz}-Bedingung beschreibt den Spulenabstand im Verhältnis zu ihrem Radius.
-Diese beiden Größen sollten im Idealfall die selben Dimensionen (jeweils $R$) haben.\\
+Die sogenannte \textsc{Helmholtz}-Bedingung beschreibt den Spulenabstand im Verhältnis zu ihrem Radius.
+Diese beiden Größen sollten im Idealfall die selben Dimensionen (jeweils $R$) haben.
 \subsection{Messverfahren von Magnetfeldern}
 \subsubsection*{Hallsonde}
 Eine Hallsonde ist ein technisches Bauteil um das Magnetfeld an einer Stelle zu bestimmen.
@@ -248,11 +248,13 @@ Eine Induktionsspule ist eine Spule, die an einen Stromintegrator angeschlossen 
 \end{align}
 Dies gilt, falls $A=const.$ ist.
 Das Integral über die Spannung kann nun von einem Stromintegrator bestimmt werden.
-Dies liefert die geflossene Ladung, welche über 
+Dies liefert die geflossene Ladung, welche sich über über 
 \begin{align}
 	R_\text{int}\cdot Q=\int_0^t U_\text{ind}\, dt'
 \end{align}
-Der hier verwendete gibt jedoch nicht direkt das Integral aus, sondern nur einen dazu proportionalen Wert.
+bestimmt.
+
+Das hier verwendete Gerät gibt jedoch nicht direkt das Integral aus, sondern nur einen dazu proportionalen Wert.
 Daher muss es noch geeicht werden.
 Außerdem kann eine Induktionsspule nur Magnetfeldänderungen messen und nicht absolute Größen, so dass man das Magnetfeld einmal abschalten muss.
 \section{Durchführung}
@@ -278,28 +280,50 @@ Zuletzt werden die Daten der einzelnen Spulen wie Länge, Durchmesser und Wicklu
 
 \section{Auswertung}
 \label{sec:auswertung}
-\subsection{Eichen des Ladungsmessgeräts}
+\subsection{Eichen des Stromintegrators}
+Die verwendeten Widerstände waren:
+\begin{itemize}
+	\item $R_1=1\si{\kilo\ohm}$
+	\item $R_2=3.3\si\ohm$
+	\item Innenwiderstand des Stromintegrators $R_\text{int}$
+	\item Spulenwiderstand $R_L$
+\end{itemize}
+Der Strom, der durch den Integrator fließt, wird mit $I_\kappa$ bezeichnet.
 Aufgrund der Reihen- und Parallelschaltung der verschiedenen Widerstände ergibt sich ein Gesamtwiderstand von 
 \begin{align}
 		R_\text{ges}=R_1+\left(\frac{1}{R_2}+\frac{1}{R_L+R_\text{int}}\right)^{-1}\,.
 \end{align}
 Nach den Regeln für die Spannung an Parallelschaltungen gilt:
 \begin{align*}
-	R_2 I_2=(R_L+R_\text{int})I_\kappa\,.
+	R_2 I_2=(R_L+R_\text{int})I_\kappa\\
+	\Rightarrow I_2=\frac{R_L+R_\text{int}}{R_2}I_\kappa\,.
 \end{align*}
-
+Damit kann der Gesamtstrom berechnet werden:
 \begin{align*}
-	I_\text{ges}=\frac{U}{I_\text{ges}}=I_\kappa+I_2=I_\kappa\left(1+\frac{R_L+R_\text{int}}{R_2}\right)
+	I_\text{ges}&=I_\kappa+I_2=I_\kappa\left(1+\frac{R_L+R_\text{int}}{R_2}\right)\\
+	\Rightarrow I_\kappa&=\frac{I_\text{ges}}{1+\frac{R_L+R_\text{int}}{R_2}}\,.
 \end{align*}
-
+Woraus sich der Widerstand der Spule und dem Integrator wie folgt ergibt:
 \begin{align}
-	R_\kappa=\frac{U}{I_\kappa}=\frac{U}{I_\text{ges}}\left(1+\frac{R_L+R_\text{int}}{R_2}\right)=R_\text{ges}\left(1+\frac{R_L+R_\text{int}}{R_2}\right)
+	R_\kappa=R_\text{int}+R_L=\frac U{I_\kappa}=\frac{U}{I_\text{ges}}\left(1+\frac{R_L+R_\text{int}}{R_2}\right)=R_\text{ges}\left(1+\frac{R_L+R_\text{int}}{R_2}\right)\,.
 \end{align}
 Der durch den Stromintegrator fließende Strom $I_\kappa$ bei einer anliegenden Spannung von $U_\text{int}$ beträgt
 \begin{align}
 	U_\text{int}&=\frac{U_\text{ges}R_\text{int}}{R_\text{int}+R_1}\\
 	I_\kappa&=\frac{U_\text{int}}{R_\text{int}+R_L}\approx 6.85\cdot 10^{-7}\si\ampere
 \end{align}
+
+Die Widerstände werden als fehlerfrei angenommen, da sie als Herstellerangaben im Vergleich zu den sonstigen auftretenden Fehlerquellen zu vernachlässigen sind.
+Die Eichkonstante $\kappa$, welche das Verhältnis der angezeigten Skalenteilen zu den geflossenen Coulomb angibt, wurde mit der linearen Regression
+\begin{align*}
+	y=\kappa\cdot x
+\end{align*}
+bestimmt.
+Es ergibt sich
+\begin{align}
+	\kappa=(426.9 \pm 0.4)\,\si{\pico\coulomb\per Skt.}\,.
+\end{align}
+Da der Fehler so gering ist, wird er in der folgenden Berechnung nicht berücksichtigt.
 \begin{figure}[!htb]
 	\centering
 	\input{Eichen}
@@ -307,10 +331,6 @@ Der durch den Stromintegrator fließende Strom $I_\kappa$ bei einer anliegenden 
 	\label{fig:Eichen}
 \end{figure}
 
-\begin{align}
-	\kappa=(426.9 \pm 0.4)\,\si{\pico\coulomb\per Skt.}
-\end{align}
-Da der Fehler so gering ist, wird er in der folgenden Berechnung nicht berücksichtigt.
 \subsection{Vergleich der beiden Messmethoden}
 In Abbildung \ref{fig:LangIndHall} sind die Messwerte der beiden Messmethoden sowie der theoretische Verlauf des Magnetfeldes an der langen Spule aufgetragen.
 Hierbei fällt auf, dass die Messung der Hallsonde innerhalb der Spule stärker von der Theorie abweicht, als die der Induktionsspule.
@@ -332,8 +352,11 @@ In Diagramm \ref{fig:HallVergleich} sind die Messwerte der Hallsonde für die la
 \subsection{Homogenität der Magnetfelder}
 In Abbildung \ref{fig:Homogen} sind die Messwerte der Hallsonde für alle Spulen aufgetragen.
 Die Werte, welche nicht aufgenommen wurden, wurden um den Mittelpunkt der Spulen gespigelt, da diese einen symmetrischen Verlauf besitzen.
-Hierbei fällt auf, dass die Helmholzspulen zwar außerhalb der Spulen einen sehr starken Abfall der Feldstärke besitzen, im Inneren ist ihr Magnetfeld jedoch deutlich homogener, als das der Dicken Spule.
-Bei dieser fällt es zwar zum Rand hin nicht so schnell ab, es sit jedoch an keiner Stelle konstant.
+Hierbei fällt auf, dass die Helmholtzspulen zwar außerhalb der Spulen einen sehr starken Abfall der Feldstärke besitzen, im Inneren ist ihr Magnetfeld jedoch deutlich homogener, als das der Dicken Spule.
+Bei dieser fällt es zwar zum Rand hin nicht so schnell ab, es ist jedoch an keiner Stelle konstant.
+
+In unserem Aufbau haben wir die Helmholtzspulen parallel angeschlossen, so dass nur der halbe Strom durch die einzelne Spule fließt.
+Dies muss man in der Auswertung berücksichtigen, da sonst die Magnetfelder die doppelte Stärke hätten.
 
 \begin{figure}[!htb]
 	\centering
@@ -349,6 +372,7 @@ In Tabelle \ref{tab:mu} sind die Berechneten $\mu_0$ zu sehen, welche nach der F
 \end{align*}
 berechnet wird.
 Dabei werden für das $B$-Feld die Messwerte und für das $H$-Feld die theoretisch nach Formeln \eqref{eq:BSpule} und \eqref{eq:BHelm} bestimmten Werte.
+Dies haben wir über das Fitten der Theoriekurve an die Messwerte über den Faktor $\mu_0$ durchgeführt, da so gleich die gewichteten Mittelwerte der jeweiligen Kurven ermittelt werden.
 Zu beachten ist hierbei, dass es sich bei den Näherungen des theoretischen $B$-Feldes um Taylor-Entwicklungen um die Mitte der Spule handelt, welche außerhalb der Spulen deutlich ungenauer werden.
 
 \begin{table}[!htb]
@@ -375,7 +399,7 @@ Zu beachten ist hierbei, dass es sich bei den Näherungen des theoretischen $B$-
 \label{sec:diskussion}
 \subsection{Eichen des Stromintegrators}
 In der Graphik \ref{fig:Eichen} sind die Ladungen gegen die vom Stromintegrator angezeigten Skalenteile aufgetragen.
-Die Messwerte liegen sehr gut auf einer Geraden, so dass sich nur eine Unsicherheit der Geradensteigung von $0.1\%$ ergibt.
+Die Messwerte liegen sehr gut auf einer Geraden, so dass sich nur eine Unsicherheit der Geradensteigung (der Eichkonstante) $\kappa$ von $0.1\%$ ergibt.
 
 \subsection{Vergleich der Messmethoden}
 In Abb. \ref{fig:LangIndHall} sind die Messwerte der beiden Methoden eingezeichnet, sowie die theoretische Kurve.
@@ -385,9 +409,9 @@ Die Induktionsspule ist jedoch im Bereich von 15cm bis zu der letzten Messung fa
 
 \subsection{Hallsonde}
 In dem Diagramm \ref{fig:HallVergleich} sind die Messwerte der Hallsonde zusammen mit den Theoriekurven für die dicke und die lange Spule aufgetragen.
-bei beiden liegen die Messungen im Inneren der Spulen über den berechneten Werten und fallen danach darunter.
+Bei beiden liegen die Messungen im Inneren der Spulen über den berechneten Werten und fallen danach darunter.
 Die Messwerte beinhalten zwar kaum die erwarteten in ihren Fehlerintervallen, jedoch folgen sie deutlich den Kurven, so dass sich vermuten lässt, dass im Inneren Effekte vernachlässigt wurden, welche die Werte beeinflussten.
-Aich kann man gut sehen, dass die Felder im Inneren nicht so groß werden, wie unter der Näherung der langen Spule.
+Auch kann man gut sehen, dass die Felder im Inneren nicht so groß werden, wie unter der Näherung der langen Spule.
 
 
 \subsection{Homogenität der Magnetfelder}
@@ -396,9 +420,13 @@ Die Werte, welche nicht aufgenommen wurden, wurden um den Mittelpunkt der Spule 
 Wie zu erwarten, hat die dicke Spule keinen nennenswerten Bereich, in dem sie ein homogenes Magnetfeld besitzt, während die Helmholzspulen auf 10cm eine annähernd konstante Feldstärke aufweisen.
 Die lange Spule ist natürlich auf einem noch größeren Bereich (ca. 30cm) in guter Näherung mit einem homogenen Feld gefüllt.
 
+Wir haben die Helmholtzspulen parallel und nicht in Reihe geschaltet, wie es eigentlich vorgesehen ist.
+Dies hat den Nachteil, dass so der Strom in den Spulen nicht gleich groß ist, falls sie unterschiedliche Widerstände haben, so dass das Magnetfeld nicht homogen ist.
+In unserem Fall war dies augenscheinlich nicht besonders stark der Fall, für zukünftige Versuche sollte man aber darauf achten, dies zu vermeiden.
 
 \subsection{Bestimmung von $\mu_0$}
-Der gewichtete Mittelwert aus Tabelle \ref{tab:mu} beträgt  $(13.308\pm 0.006)10^{-7}\si{\newton\ampere^{-2}}$, was um ungefähr 6\% größer ist, als der tatsächliche Wert von $4\pi\cdot10^{-7}\si{\newton\ampere^{-2}}$.
+Der gewichtete Mittelwert aus Tabelle \ref{tab:mu} beträgt  $(13.308\pm 0.006)\cdot 10^{-7}\si{\newton\ampere^{-2}}$, was um ungefähr 6\% größer ist, als der tatsächliche Wert von $4\pi\cdot10^{-7}\si{\newton\ampere^{-2}}$.
+Dieser liegt nicht im Fehlerintervall, was vermutlich an der zu geringen Fehlerabschätzung und der Vernachlässigung einiger Fehler liegt.
 
 \bibliography{literatur}
 \bibliographystyle{babalpha}
