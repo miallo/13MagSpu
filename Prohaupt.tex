@@ -199,6 +199,10 @@ Die Maxwell-Gleichungen beschreiben die Felder:
 	\nabla\cdot\vec B=0\\
 	\nabla\times\vec H=\vec j+\frac{\partial \vec D}{\partial t}
 \end{align}
+Nach dem \textsc{Ampère}schen Gesetz gilt:
+\begin{align}
+	\oint B\, dl=\mu_0I\label{eq:mu}
+\end{align}
 
 \subsection{Magnetfelder von Spulen}
 \subsubsection*{Zylinderspulen}
@@ -241,7 +245,7 @@ Eine Induktionsspule ist eine Spule, die an einen Stromintegrator angeschlossen 
 	U_\text{ind}&=-n\dot\Phi=-n\frac d{dt}(\vec A\cdot\vec B)\\
 	\Leftrightarrow B_\perp &=-\frac{1}{nA}\int U_\text{ind}\, dt\,.
 \end{align}
-Dies gilt, falls $A=const.$ is ist.
+Dies gilt, falls $A=const.$ ist.
 Das Integral über die Spannung kann nun von einem Stromintegrator bestimmt werden.
 Dies liefert die geflossene Ladung, welche über 
 \begin{align}
@@ -274,22 +278,27 @@ Zuletzt werden die Daten der einzelnen Spulen wie Länge, Durchmesser und Wicklu
 \section{Auswertung}
 \label{sec:auswertung}
 \subsection{Eichen des Ladungsmessgeräts}
+Aufgrund der Reihen- und Parallelschaltung der verschiedenen Widerstände ergibt sich ein Gesamtwiderstand von 
 \begin{align}
-		R_\text{ges}=R_1+\left(\frac{1}{R_2}+\frac{1}{R_L+R_\text{int}}\right)^{-1}
+		R_\text{ges}=R_1+\left(\frac{1}{R_2}+\frac{1}{R_L+R_\text{int}}\right)^{-1}\,.
 \end{align}
-
+Nach den Regeln für die Spannung an Parallelschaltungen gilt:
 \begin{align*}
-	R_2 I_2=(R_L+R_\text{int})I_\kappa
+	R_2 I_2=(R_L+R_\text{int})I_\kappa\,.
 \end{align*}
 
 \begin{align*}
-	I_\text{ges}=I_\kappa+I_2=I_\kappa\left(1+\frac{R_L+R_\text{int}}{R_2}\right)
+	I_\text{ges}=\frac{U}{I_\text{ges}}=I_\kappa+I_2=I_\kappa\left(1+\frac{R_L+R_\text{int}}{R_2}\right)
 \end{align*}
 
 \begin{align}
 	R_\kappa=\frac{U}{I_\kappa}=\frac{U}{I_\text{ges}}\left(1+\frac{R_L+R_\text{int}}{R_2}\right)=R_\text{ges}\left(1+\frac{R_L+R_\text{int}}{R_2}\right)
 \end{align}
-
+Der durch den Stromintegrator fließende Strom $I_\kappa$ bei einer anliegenden Spannung von $U_\text{int}$ beträgt
+\begin{align}
+	U_\text{int}&=\frac{U_\text{ges}R_\text{int}}{R_\text{int}+R_1}\\
+	I_\kappa&=\frac{U_\text{int}}{R_\text{int}+R_L}\approx 6.85\cdot 10^{-7}\si\ampere
+\end{align}
 \begin{figure}[!htb]
 	\centering
 	\input{Eichen}
@@ -300,8 +309,10 @@ Zuletzt werden die Daten der einzelnen Spulen wie Länge, Durchmesser und Wicklu
 \begin{align}
 	\kappa=(426.9 \pm 0.4)\,\si{\pico\coulomb\per Skt.}
 \end{align}
-Da der Fehler so gering ist wird er in der folgenden Berechnung nicht berücksichtigt.
+Da der Fehler so gering ist, wird er in der folgenden Berechnung nicht berücksichtigt.
 \subsection{Vergleich der beiden Messmethoden}
+In Abbildung \ref{fig:LangIndHall} sind die Messwerte der beiden Messmethoden sowie der theoretische Verlauf des Magnetfeldes an der langen Spule aufgetragen.
+Hierbei fällt auf, dass die Messung der Hallsonde innerhalb der Spule stärker von der Theorie abweicht, als die der Induktionsspule.
 \begin{figure}[!htb]
 	\centering
 	\input{LangIndHall}
@@ -324,7 +335,14 @@ Da der Fehler so gering ist wird er in der folgenden Berechnung nicht berücksic
 \end{figure}
 
 \subsection{Bestimmung von $\mu_0$}
-In Tabelle \ref{tab:mu} sind die nach 
+In Tabelle \ref{tab:mu} sind die Berechneten $\mu_0$ zu sehen, welche nach der Formel
+\begin{align*}
+	B=\mu_0 H
+\end{align*}
+berechnet wird.
+Dabei werden für das $B$-Feld die Messwerte und für das $H$-Feld die theoretisch nach Formeln \eqref{eq:BSpule} und \eqref{eq:BHelm} multipliziert mit $\mu_0$ bestimmten Werte.
+Zu beachten ist hierbei, dass es sich bei den Näherungen des theoretischen $B$-Feldes um Taylor-Entwicklungen um die Mitte der Spule handelt, welche außerhalb der Spulen deutlich ungenauer werden.
+
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|}
@@ -337,7 +355,8 @@ In Tabelle \ref{tab:mu} sind die nach
 	          & Lange Spule & $13.67 \pm 0.11$ \\
 	Hallsonde & Dicke Spule & $13.28 \pm 0.13$ \\
 	          & Helmholtzspule & $12.39 \pm 0.05$ \\
-	\hline	
+	\hline\hline
+	Gew. Mittelwert	& & $13.308\pm 0.006$ \\\hline
 	\end{tabular}
 	\caption{Aus den verschiedenen Messungen bestimmte magnetische Feldkonstante}
 	\label{tab:mu}
@@ -371,7 +390,7 @@ Die lange Spule ist natürlich auf einem noch größeren Bereich (ca. 30cm) in g
 
 
 \subsection{Bestimmung von $\mu_0$}
-Der gewichtete Mittelwert aus Tabelle \ref{tab:mu}
+Der gewichtete Mittelwert aus Tabelle \ref{tab:mu} beträgt  $(13.308\pm 0.006)10^{-7}\si{\newton\ampere^{-2}}$, was um ungefähr 6\% größer ist, als der tatsächliche Wert von $4\pi\cdot10^{-7}\si{\newton\ampere^{-2}}$.
 
 \bibliography{literatur}
 \bibliographystyle{babalpha}
