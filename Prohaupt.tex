@@ -169,7 +169,7 @@ Praktikant: &  Michael Lohmann\\
 Spulen sind für die Transformation von Spannungen essentiell.
 Jede Spule besitzt ein charakteristisches Magnetfeld mit dessen genauer Kenntnis man zum Beispiel Untersuchungen wie Magnetresonanztomographie ermöglichen kann.
 Dafür ist allerdings eine sehr genaue Beschreibung des Magnetfeldes der Spule notwendig.
-Für zwei Spulen wurde es hier durchgeführt.
+Für drei Spulen wurde es hier durchgeführt.
 
 \section{Theorie}
 \label{sec:theorie}
@@ -310,7 +310,7 @@ Woraus sich der Widerstand der Spule und dem Integrator wie folgt ergibt:
 Der durch den Stromintegrator fließende Strom $I_\kappa$ bei einer anliegenden Spannung von $U_\text{int}$ beträgt
 \begin{align}
 	U_\text{int}&=\frac{U_\text{ges}R_\text{int}}{R_\text{int}+R_1}\\
-	I_\kappa&=\frac{U_\text{int}}{R_\text{int}+R_L}\approx 6.85\cdot 10^{-7}\si\ampere
+	I_\kappa&=\frac{U_\text{int}}{R_\text{int}+R_L}\approx 6.85\cdot 10^{-7}\si\ampere\,.
 \end{align}
 
 Die Widerstände werden als fehlerfrei angenommen, da sie als Herstellerangaben im Vergleich zu den sonstigen auftretenden Fehlerquellen zu vernachlässigen sind.
@@ -342,6 +342,8 @@ Hierbei fällt auf, dass die Messung der Hallsonde innerhalb der Spule stärker 
 \end{figure}
 \subsection{Messung mit der Hallsonde}
 In Diagramm \ref{fig:HallVergleich} sind die Messwerte der Hallsonde für die lange und die dicke Spule mit den theoretischen Messwerten aufgetragen.
+Die Näherung der Langen Spule ist, wie deutlich zu erkennen, nur im Inneren der Spule halbwegs akkurat.
+Sie entspricht natürlich für die lange Spule eher der Realität und erstaunlicherweise genauer den Messwerten bis ca. 15cm von der Mitte entfernt.
 
 \begin{figure}[!htb]
 	\centering
@@ -351,7 +353,7 @@ In Diagramm \ref{fig:HallVergleich} sind die Messwerte der Hallsonde für die la
 \end{figure}
 \subsection{Homogenität der Magnetfelder}
 In Abbildung \ref{fig:Homogen} sind die Messwerte der Hallsonde für alle Spulen aufgetragen.
-Die Werte, welche nicht aufgenommen wurden, wurden um den Mittelpunkt der Spulen gespigelt, da diese einen symmetrischen Verlauf besitzen.
+Die Werte, welche nicht aufgenommen wurden, wurden um den jeweiligen Mittelpunkt der Spulen gespiegelt, da diese einen symmetrischen Verlauf besitzen.
 Hierbei fällt auf, dass die Helmholtzspulen zwar außerhalb der Spulen einen sehr starken Abfall der Feldstärke besitzen, im Inneren ist ihr Magnetfeld jedoch deutlich homogener, als das der Dicken Spule.
 Bei dieser fällt es zwar zum Rand hin nicht so schnell ab, es ist jedoch an keiner Stelle konstant.
 
@@ -366,11 +368,11 @@ Dies muss man in der Auswertung berücksichtigen, da sonst die Magnetfelder die 
 \end{figure}
 
 \subsection{Bestimmung von $\mu_0$}
-In Tabelle \ref{tab:mu} sind die Berechneten $\mu_0$ zu sehen, welche nach der Formel
+In Tabelle \ref{tab:mu} sind die berechneten $\mu_0$ zu sehen, welche nach der Formel
 \begin{align*}
 	B=\mu_0 H
 \end{align*}
-berechnet wird.
+bestimmt werden.
 Dabei werden für das $B$-Feld die Messwerte und für das $H$-Feld die theoretisch nach Formeln \eqref{eq:BSpule} und \eqref{eq:BHelm} bestimmten Werte.
 Dies haben wir über das Fitten der Theoriekurve an die Messwerte über den Faktor $\mu_0$ durchgeführt, da so gleich die gewichteten Mittelwerte der jeweiligen Kurven ermittelt werden.
 Zu beachten ist hierbei, dass es sich bei den Näherungen des theoretischen $B$-Feldes um Taylor-Entwicklungen um die Mitte der Spule handelt, welche außerhalb der Spulen deutlich ungenauer werden.
@@ -400,6 +402,8 @@ Zu beachten ist hierbei, dass es sich bei den Näherungen des theoretischen $B$-
 \subsection{Eichen des Stromintegrators}
 In der Graphik \ref{fig:Eichen} sind die Ladungen gegen die vom Stromintegrator angezeigten Skalenteile aufgetragen.
 Die Messwerte liegen sehr gut auf einer Geraden, so dass sich nur eine Unsicherheit der Geradensteigung (der Eichkonstante) $\kappa$ von $0.1\%$ ergibt.
+Dies spricht für die Qualität des  Integrators, da er selbst bei einer halben Sekunde immer noch keine Sättigung zeigt.
+Darauf müsste man bei anderen Versuchsaufbauten gegebenenfalls achten und den Widerstand $R_2$ dementsprechend anpassen.
 
 \subsection{Vergleich der Messmethoden}
 In Abb. \ref{fig:LangIndHall} sind die Messwerte der beiden Methoden eingezeichnet, sowie die theoretische Kurve.
@@ -416,7 +420,7 @@ Auch kann man gut sehen, dass die Felder im Inneren nicht so groß werden, wie u
 
 \subsection{Homogenität der Magnetfelder}
 In Abbildung \ref{fig:Homogen} sind die Messwerte der Hallsonde für alle Spulen aufgetragen.
-Die Werte, welche nicht aufgenommen wurden, wurden um den Mittelpunkt der Spule gespigelt, da diese einen symmetrischen Verlauf besitzt.
+Die Werte, welche nicht aufgenommen wurden, wurden um den Mittelpunkt der Spule gespiegelt, da diese einen symmetrischen Verlauf besitzt.
 Wie zu erwarten, hat die dicke Spule keinen nennenswerten Bereich, in dem sie ein homogenes Magnetfeld besitzt, während die Helmholzspulen auf 10cm eine annähernd konstante Feldstärke aufweisen.
 Die lange Spule ist natürlich auf einem noch größeren Bereich (ca. 30cm) in guter Näherung mit einem homogenen Feld gefüllt.
 
@@ -425,7 +429,7 @@ Dies hat den Nachteil, dass so der Strom in den Spulen nicht gleich groß ist, f
 In unserem Fall war dies augenscheinlich nicht besonders stark der Fall, für zukünftige Versuche sollte man aber darauf achten, dies zu vermeiden.
 
 \subsection{Bestimmung von $\mu_0$}
-Der gewichtete Mittelwert aus Tabelle \ref{tab:mu} beträgt  $(13.308\pm 0.006)\cdot 10^{-7}\si{\newton\ampere^{-2}}$, was um ungefähr 6\% größer ist, als der tatsächliche Wert von $4\pi\cdot10^{-7}\si{\newton\ampere^{-2}}$.
+Der gewichtete Mittelwert aller bestimmten $\mu_0$ aus Tabelle \ref{tab:mu} beträgt  $(13.308\pm 0.006)\cdot 10^{-7}\si{\newton\ampere^{-2}}$, was um ungefähr 6\% größer ist, als der tatsächliche Wert von $4\pi\cdot10^{-7}\si{\newton\ampere^{-2}}$.
 Dieser liegt nicht im Fehlerintervall, was vermutlich an der zu geringen Fehlerabschätzung und der Vernachlässigung einiger Fehler liegt.
 
 \bibliography{literatur}
